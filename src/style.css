@@ -1,0 +1,136 @@
+.fs-rem-4 {
+  font-size: 5rem;
+}
+@media (max-width: 767px) {
+  .fs-rem-4 {
+    font-size: 2.5rem;
+  }
+}
+
+.mian-color {
+  color: #222222;
+}
+
+.cur-pointer {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: #222222;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav .logo,
+nav ul,
+nav .contact {
+  background-color: #222222;
+  z-index: 3;
+}
+@media (max-width: 767px) {
+  nav .secial {
+    position: absolute;
+    top: 0%;
+    margin-top: 29px;
+    right: 6.5%;
+    padding-top: 50px;
+    background: transparent;
+    transform: rotate(90deg);
+    transform-origin: top;
+    transition: 0.3s;
+    opacity: 0;
+    z-index: 1;
+  }
+  nav .secial.show {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  nav .secial li {
+    margin-bottom: 10px;
+  }
+}
+nav li {
+  height: 30px;
+  width: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+nav li:hover {
+  background-color: gray;
+}
+nav .icon {
+  cursor: pointer;
+  z-index: 5;
+}
+nav .container {
+  position: relative;
+}
+@media (min-width: 767px) {
+  nav .container::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background-color: white;
+    transform: translateY(-50%);
+  }
+}
+
+.landing h1 {
+  position: relative;
+  background: rgb(181, 132, 79);
+  background: radial-gradient(circle, rgb(181, 132, 79) 0%, rgb(255, 255, 255) 40%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.landing .image {
+  margin: -7% auto auto;
+  max-width: 400px;
+}
+.landing .image img {
+  border-radius: 650px;
+}
+.landing .extantion-text {
+  margin-top: 20px;
+}
+@media (min-width: 767px) {
+  .landing .extantion-text {
+    margin-top: -70px;
+  }
+}
+.landing .extantion-text > div {
+  max-width: 250px;
+}
+
+.shafling {
+  width: 40%;
+}
+.shafling li {
+  width: 95%;
+  height: 1px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+.shafling .longer {
+  width: 100%;
+}
+.shafling.right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.services {
+  background-color: #2e2e2e;
+}
+.services .cell > img {
+  width: 2.7rem;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,155 @@
+// ------------helper
+
+.fs-rem-4 {
+  font-size: 5rem;
+  @media (max-width: 767px) {
+    font-size: 2.5rem;
+  }
+}
+
+.mian-color {
+  color: #222222;
+}
+
+.cur-pointer {
+  cursor: pointer;
+}
+
+// helper
+
+body {
+  font-family: "Barlow", sans-serif;
+
+  background-color: #222222;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  .logo,
+  ul,
+  .contact {
+    background-color: #222222;
+    z-index: 3;
+  }
+
+  @media (max-width: 767px) {
+    .secial {
+      &.show {
+        opacity: 1;
+        transform: rotate(0deg);
+      }
+      position: absolute;
+      top: 0%;
+      margin-top: 29px;
+      right: 6.5%;
+      padding-top: 50px;
+      background: transparent;
+      transform: rotate(90deg);
+      transform-origin: top;
+      transition: 0.3s;
+      opacity: 0;
+      z-index: 1;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  li {
+    height: 30px;
+    width: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: gray;
+    }
+  }
+  .icon {
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .container {
+    position: relative;
+    @media (min-width: 767px) {
+      &::before {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        width: 90%;
+        height: 1px;
+        background-color: white;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.landing {
+  h1 {
+    position: relative;
+    background: rgb(181, 132, 79);
+    background: radial-gradient(circle, rgba(181, 132, 79, 1) 0%, rgba(255, 255, 255, 1) 40%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+  .image {
+    margin: -7% auto auto;
+    max-width: 400px;
+    img {
+      border-radius: 650px;
+    }
+  }
+  .extantion-text {
+    margin-top: 20px;
+    @media (min-width: 767px) {
+      & {
+        margin-top: -70px;
+      }
+    }
+    > div {
+      max-width: 250px;
+    }
+  }
+}
+
+// shafling
+
+.shafling {
+  width: 40%;
+  li {
+    width: 95%;
+    height: 1px;
+    background-color: white;
+    margin-bottom: 5px;
+  }
+  .longer {
+    width: 100%;
+  }
+  &.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    li {
+      // width: 100%;
+    }
+  }
+}
+
+// services
+
+.services {
+  background-color: #2e2e2e;
+  .cell > img {
+    width: 2.7rem;
+  }
+}
